@@ -4,23 +4,23 @@
 ### Partie 1 (Java OOP) :
 - En tant que développeur back-end, vous devez créer une application console Java simulant les poupées russes de différentes tailles, connues sous le nom de "les poupées russes". Chaque poupée doit avoir une taille donnée, peut s'ouvrir ou se fermer, peut contenir une autre poupée et être contenue dans une autre poupée.
 
-### Classe de Base : Poupee
-- La classe Poupee représente la base de la hiérarchie. Elle encapsule les propriétés communes à toutes les poupées.
+### Classe de Base : Doll
+- La classe Doll représente la base de la hiérarchie. Elle encapsule les propriétés communes à toutes les poupées.
 
-- La classe Poupee doit avoir un constructeur permettant d'initialiser une poupée avec une taille donnée.
+- La classe Doll doit avoir un constructeur permettant d'initialiser une poupée avec une taille donnée.
 
 - Les propriétés (taille, ouverte) doivent être encapsulées et accessibles via des méthodes d'accès.
 
-- La classe Poupee doit avoir les méthodes abstraites suivantes :
+- La classe Doll doit avoir les méthodes abstraites suivantes :
 \*\* void ouvrir(): Ouvre la poupée. 
 
 \*\* void fermer(): Ferme la poupée. 
 
-\*\* void placerDans(Poupee p): Place la poupée courante dans la poupée p. 
+\*\* void placerDans(Doll p): Place la poupée courante dans la poupée p. 
 
-\*\* void sortirDe(Poupee p): Sort la poupée courante de la poupée p.
+\*\* void sortirDe(Doll p): Sort la poupée courante de la poupée p.
 ### Classe Concrète : PoupéeRusse
-- La classe PoupéeRusse hérite de la classe de base Poupee et implémente les méthodes spécifiques.
+- La classe PoupéeRusse hérite de la classe de base Doll et implémente les méthodes spécifiques.
 
 - Le constructeur de la classe PoupéeRusse doit appeler le constructeur de la classe de base.
 
