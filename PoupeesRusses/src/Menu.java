@@ -6,16 +6,16 @@ public class Menu {
 
         Scanner scanner = new Scanner(System.in);
 
-
+        System.out.print("Enter the size of the first doll : ");
+        int sizeDoll = scanner.nextInt();
+        DollRussian doll = new DollRussian(sizeDoll);
+        System.out.print("Enter the size of the second doll : ");
+        int sizeDoll2 = scanner.nextInt();
+        DollRussian doll2 = new DollRussian(sizeDoll2);
 
         int choice;
         do {
-            System.out.print("Enter the size of the first doll : ");
-            int sizeDoll = scanner.nextInt();
-            DollRussian doll = new DollRussian(sizeDoll);
-            System.out.print("Enter the size of the second doll : ");
-            int sizeDoll2 = scanner.nextInt();
-            DollRussian doll2 = new DollRussian(sizeDoll2);
+
             System.out.println("╔══════════════════════════════╗");
             System.out.println("║           Doll Menu          ║");
             System.out.println("╟──────────────────────────────╢");
