@@ -1,14 +1,12 @@
 interface Doll {
-    String size = null;
-    boolean isOpen = false;
 
-    abstract public void open();
+    void open();
 
-    abstract public void close();
+    void close();
 
-    abstract public void placeIn();
+    void placeIn(Doll doll);
 
-    abstract public void getOutOf();
+    void getOutOf(Doll doll);
 
 }
 
