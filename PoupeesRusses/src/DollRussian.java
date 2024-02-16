@@ -2,15 +2,8 @@ public class DollRussian implements Doll {
 
     private boolean isOpen;
     private int size;
-    private Doll doll1;
+    private DollRussian doll1;
 
-//    public boolean isOpen() {
-//        return isOpen;
-//    }
-
-//    public void setSize(int size) {
-//        this.size = size;
-//    }
     public void setOpen(boolean open) {
         isOpen = open;
     }
@@ -28,7 +21,7 @@ public class DollRussian implements Doll {
     public void open() {
         if (!isOpen) {
             setOpen(true);
-            System.out.println("Russian doll is now open");
+            System.out.println("Russian doll "+getSize()+" is now open");
         } else {
             System.out.println("Russian doll is already open");
         }
@@ -45,18 +38,18 @@ public class DollRussian implements Doll {
 
     @Override
     public void placeIn(Doll doll) {
-        if (isOpen && doll1 == null && this.getSize() < ((DollRussian) doll).getSize()) {
-            this.doll1 = (DollRussian) doll;
-            System.out.println("Placed doll size "+getSize()+" inside Russian doll size "+((DollRussian) doll).getSize());
+        if (isOpen && doll1 == null && this.getSize() > ((DollRussian) doll).getSize()) {
+            this.doll1 =(DollRussian) doll;
+            System.out.println("Placed doll size "+((DollRussian) doll).getSize()+" inside Russian doll size "+getSize());
         } else {
-            System.out.println("Cannot place doll size " +getSize()+" inside Russian doll size "+((DollRussian) doll).getSize());
+            System.out.println("Cannot place doll size " +((DollRussian) doll).getSize()+" inside Russian doll size "+getSize());
         }
     }
 
     @Override
     public void getOutOf(Doll doll) {
         if (isOpen && doll1 != null) {
-            System.out.println("Taking doll size "+getSize()+ " out of the Russian doll size "+((DollRussian)doll).getSize());
+            System.out.println("Taking doll size "+((DollRussian)doll).getSize()+ " out of the Russian doll size "+getSize());
             this.doll1 = null;
         } else {
             System.out.println("Cannot take doll out - Russian doll is closed or empty");
